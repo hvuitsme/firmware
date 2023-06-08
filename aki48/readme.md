@@ -1,6 +1,6 @@
 # aki48
 
-![aki48] ( https://imgur.com/8hK1Ipm )
+![aki48](https://i.imgur.com/8hK1Ipm.jpg)
 
 *A short description of the keyboard/project*
 
