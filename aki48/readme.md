@@ -4,7 +4,7 @@
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [Hoan](https://github.com/hvuitsme)
+* Keyboard Maintainer: [hvuitsme](https://github.com/hvuitsme)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 
