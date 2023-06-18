@@ -1,4 +1,4 @@
-// Copyright 2023 hvuitsme
+// Copyright 2023 QMK
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include QMK_KEYBOARD_H
@@ -7,11 +7,9 @@
 
 enum layer_number{
     _BASE = 0,
-    _FN1 = 1,
-    _FN2 = 2,
-    _FN3 = 3
+    _FN1,
+    _FN2
 };
-
 
 #define _______ KC_TRANSPARENT
 
@@ -122,8 +120,7 @@ bool oled_task_user(void) {
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [_FN1] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
-    [_FN2] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
-    [_FN3] =  { ENCODER_CCW_CW(RGB_MOD, RGB_RMOD) },
+    [_FN2] =  { ENCODER_CCW_CW(RGB_MOD, RGB_RMOD) },
 };
 #endif
 
@@ -135,7 +132,7 @@ bool encoder_update_user(uint8_t index, bool clockwise){
         } else {
             tap_code(KC_VOLD);
         }
-    } else if (IS_LAYER_ON(_FN3)) {
+    } else if (IS_LAYER_ON(_FN2)) {
         if (clockwise){
             rgblight_step();
         } else {
