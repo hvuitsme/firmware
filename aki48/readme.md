@@ -1,10 +1,10 @@
 # aki48
 
-![aki48](https://i.imgur.com/8hK1Ipm.jpg)
+![aki48](https://imgur.com/8hK1Ipm)
 
 *A short description of the keyboard/project*
 
-* Keyboard Maintainer: [hvuitsme](https://github.com/hvuitsme)
+* Keyboard Maintainer: [Hoan](https://github.com/hvuitsme)
 * Hardware Supported: *The PCBs, controllers supported*
 * Hardware Availability: *Links to where you can find this hardware*
 

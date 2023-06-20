@@ -21,7 +21,7 @@
 
 #define WS2812_DI_PIN D3
 #ifdef RGB_MATRIX_ENABLE
-    #define RGBLED_NUM       56 // Number of LEDs
+    #define RGBLED_NUM       57 // Number of LEDs
     #define RGB_MATRIX_LED_COUNT RGBLED_NUM
     #define RGB_MATRIX_MAXIMUM_BRIGHTNESS 170 // limits maximum brightness of LEDs to 150 out of 255. Higher may cause the controller to crash.
     #    define RGB_MATRIX_KEYPRESSES
