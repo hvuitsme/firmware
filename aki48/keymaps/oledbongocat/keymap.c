@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │LSF│XXX│XXX│XXX│XXX│XXX│      │XXX│XXX│XXX│XXX│XXX│RSF│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │LCT│XXX│ALT│ ↓ │FN2│SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
+     * │LCT│XXX│ALT│FN2│ ↓ │SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │     space    │
      *                     └──────────────┘
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │LSF│ ~ │XXX│XXX│XXX│XXX│      │XXX│XXX│XXX│XXX│XXX│RSF│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │LCT│XXX│ALT│FN1│ ↓ │SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
+     * │LCT│XXX│ALT│ ↓ │FN1│SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │     space    │
      *                     └──────────────┘
