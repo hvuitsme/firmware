@@ -7,8 +7,13 @@
 
 enum layer_number{
     _BASE = 0,
-    _FN1,
-    _FN2
+    _FN1 = 1,
+    _FN2 = 2,
+    _FN3 = 3
+};
+
+enum custom_keycodes {
+  PROG = QK_KB_0,
 };
 
 #define _______ KC_TRANSPARENT
@@ -79,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │XXX│XXX│XXX│XXX│VAD│VAI│      │XXX│XXX│XXX│XXX│XXX│XXX│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │XXX│XXX│XXX│ ↓ │ ↓ │XXX│      │XXX│XXX│XXX│XXX│XXX│XXX│
+     * │XXX│XXX│XXX│ ↓ │ ↓ │XXX│  TOG │XXX│XXX│XXX│XXX│XXX│XXX│
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │      XXX     │
      *                     └──────────────┘
@@ -91,6 +96,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_SPC,  _______, KC_SPC,  KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+   return update_tri_layer_state(state, _FN1, _FN2, _FN3);
+}
 
 #ifdef OLED_ENABLE
 // Rotate OLED
@@ -171,7 +180,8 @@ bool oled_task_user(void) {
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
     [_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU)  },
     [_FN1] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
-    [_FN2] =  { ENCODER_CCW_CW(RGB_MOD, RGB_RMOD) },
+    [_FN2] =  { ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  },
+    [_FN3] =  { ENCODER_CCW_CW(RGB_RMOD, RGB_MOD) },
 };
 #endif
 
