@@ -9,7 +9,7 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
      * ┌───┬───┬───┬───┬───┬───┐
-     * │Tab│web│ 1 │ 2 │ 3 │ 4 │
+     * │Tab│web│ 2 │ 3 │ 4 │ 5 │
      * ├───┼───┼───┼───┼───┼───┤
      * │Tab│ Q │ W │ E │ R │ T │
      * ├───┼───┼───┼───┼───┼───┤
