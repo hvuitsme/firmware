@@ -43,24 +43,24 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case MY_WEB_FUNCTION:
             if (record->event.pressed) {
-                // Mở trình duyệt (Chrome trên Windows)
-                SEND_STRING(SS_LGUI("r") SS_DELAY(100) "msedge.exxe" SS_TAP(X_ENTER)); //cái này nếu dành cho gõ unicode thì thêm 1 'x' vào để khi lúc nhập tương tự cách gõ thì ễ thành exe
-                                                                                      //có thể thay thế mấy app như : msedge.exe, firefox.exe, operagx.exe, opera.exe
-                wait_ms(2000); // Đợi 500ms (0.5 giây)
-                // Mở cửa sổ ẩn danh (Ctrl+Shift+N)
-                // Giữ Ctrl và Shift
+                //Open browser (Edge on Windows)
+                SEND_STRING(SS_LGUI("r") SS_DELAY(100) "msedge.exxe" SS_TAP(X_ENTER)); //If this is for typing unicode, add 1 'x' so that when typing in the same way, it will easily become an exe.
+                                                                                       //Can replace apps like: msedge.exe, firefox.exe, operagx.exe, opera.exe
+                wait_ms(2000); // Wait 500ms (0.5 secs)
+                //Open an incognito window (Ctrl+Shift+N)
+                //Hold Ctrl and Shift
                 register_code(KC_LCTL);
                 register_code(KC_LSFT);
-                // Nhấn N
+                //Press N
                 tap_code(KC_N);
-                // Bỏ Ctrl và Shift
+                //cancel Ctrl and Shift
                 unregister_code(KC_LSFT);
                 unregister_code(KC_LCTL);
-                // Đợi một chút trước khi nhập URL
-                wait_ms(500); // Đợi thêm 500ms (0.5 giây)
-                // Nhập đường dẫn vào thanh tìm kiếm (thay thế "https://ihentai.de/" bằng URL thực tế)
-                SEND_STRING("https://ihentai.de/");
-                // Nhấn Enter
+                //Wait a moment before entering the URL
+                wait_ms(500); //Wait another 500ms (0.5 secs)
+                //Enter the path in the search bar (replace "https://github.com/hvuitsme" with the actual URL)
+                SEND_STRING("https://github.com/hvuitsme");
+                //Press Enter
                 tap_code(KC_ENT);
             }
             break;
