@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │LSF│ Z │ X │ C │ V │ B │      │ N │ M │ , │ . │ / │RSF│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │LCT│LWN│ALT│FN1│FN2│SPC│ MUTE │SPC│ENT│ ← │ ↑ │ ↓ │ → │
+     * │LCT│LWN│ALT│FN2│FN1│SPC│ MUTE │SPC│ENT│ ← │ ↑ │ ↓ │ → │
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │     space    │
      *                     └──────────────┘
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │LSF│XXX│XXX│XXX│XXX│XXX│      │XXX│XXX│XXX│XXX│XXX│RSF│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │LCT│XXX│ALT│ ↓ │FN2│SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
+     * │LCT│XXX│ALT│FN2│ ↓ │SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │     space    │
      *                     └──────────────┘
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * ├───┼───┼───┼───┼───┼───┤      ├───┼───┼───┼───┼───┼───┤
      * │LSF│ ~ │XXX│XXX│XXX│XXX│      │XXX│XXX│XXX│XXX│XXX│RSF│
      * ├───┼───┼───┼───┼───┼───┼──────┼───┼───┼───┼───┼───┼───┤
-     * │LCT│XXX│ALT│FN1│ ↓ │SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
+     * │LCT│XXX│ALT│ ↓ │FN1│SPC│      │SPC│ENT│XXX│XXX│XXX│XXX│
      * └───┴───┴───┴───┴───┼───┴──────┴───┼───┴───┴───┴───┴───┘
      *                     │     space    │
      *                     └──────────────┘
@@ -97,7 +97,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, _______, _______, KC_SPC,  _______, KC_SPC,  KC_ENT,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     )
 };
-
 
 layer_state_t layer_state_set_user(layer_state_t state) {
    return update_tri_layer_state(state, _FN1, _FN2, _FN3);
