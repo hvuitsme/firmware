@@ -1,6 +1,6 @@
 # aki48_rp2040
 
-![aki48_rp2040](imgur.com image replace me!)
+![aki48_rp2040](https://i.imgur.com/8hK1Ipm.jpg)
 
 *A short description of the keyboard/project*
 
